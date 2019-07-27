@@ -1,3 +1,7 @@
+# Reece Benson - 2019
+# Automatically remove all instances of a site in live, staging and
+# development directories that follow the same structure as deploy.sh
+
 echo "Enter the site name to remove:"
 read SITE_NAME
 
