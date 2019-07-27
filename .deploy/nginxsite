@@ -2,8 +2,8 @@ server {
 	listen 80;
 	listen [::]:80;
 
-	server_name SERVERURL www.SERVERURL;
-	root /var/sites/SERVERTYPE/SERVERNAME/public;
+	server_name SITEURL www.SITEURL;
+	root /var/sites/SITETYPE/SITENAME/public;
 	index index.php index.html;
 
 	location / {
@@ -22,8 +22,8 @@ server {
 	}
 
 	# Error Logs
-	error_log /var/sites/SERVERTYPE/SERVERNAME/logs/error.log;
-	access_log /var/sites/SERVERTYPE/SERVERNAME/logs/access.log;
+	error_log /var/sites/SITETYPE/SITENAME/logs/error.log;
+	access_log /var/sites/SITETYPE/SITENAME/logs/access.log;
 
         # Error Pages
         error_page 404 403 /40x.html;
