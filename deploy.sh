@@ -1,3 +1,8 @@
+# Reece Benson - 2019
+# Automatically deploy a dev, staging and live environment structure setup for NGINX
+# Follows the site structure of /var/sites/{live,staging,development}/{sitename}/{public,logs}
+# Follows the NGINX structure of /etc/sites/{live,staging,development}/{live,stg,dev}.{sitename}
+
 echo "Please enter the site name:"
 read SITE_NAME
 
@@ -34,5 +39,6 @@ mv dev.$SITE_NAME /etc/sites/development
 mv stg.$SITE_NAME /etc/sites/staging
 mv live.$SITE_NAME /etc/sites/live
 
-echo "Created $SITE_NAME NGINX configuration files, restarting nginx (requires privileges)...";
+echo "Created $SITE_NAME NGINX configuration files, restarting nginx (requires privileges)..."
 sudo service nginx restart
+echo "...completed."
