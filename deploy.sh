@@ -39,6 +39,11 @@ mv dev.$SITE_NAME /etc/sites/development
 mv stg.$SITE_NAME /etc/sites/staging
 mv live.$SITE_NAME /etc/sites/live
 
+# Cleanup
+cd ../
+rm -d $SITE_NAME
+echo "Cleaned up NGINX temporary directory"
+
 echo "Created $SITE_NAME NGINX configuration files, restarting nginx (requires privileges)..."
 sudo service nginx restart
 echo "...completed."
